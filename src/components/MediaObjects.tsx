@@ -79,16 +79,6 @@ function MediaObjects() {
           templateRows='repeat(6, 1fr)'
           gap={4}
         >
-          <GridItem rowSpan={6} colSpan={1} colStart={5}>
-            <Box>
-              <Image
-                w='100%'
-                borderRadius='lg'
-                src={balloonSq2}
-                alt='Balloons'
-              />
-            </Box>
-          </GridItem>
           <GridItem rowSpan={5} colSpan={4}>
             <Box textStyle='p'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
@@ -96,6 +86,16 @@ function MediaObjects() {
               ac porttitor elit lobortis ac. Vivamus ultrices sodales tellus et
               aliquam. Pellentesque porta sit amet nulla vitae luctus. Praesent
               quis risus id dolor venenatis condimentum.
+            </Box>
+          </GridItem>
+          <GridItem rowSpan={6} colSpan={1}>
+            <Box>
+              <Image
+                w='100%'
+                borderRadius='lg'
+                src={balloonSq2}
+                alt='Balloons'
+              />
             </Box>
           </GridItem>
           <GridItem rowSpan={1} colSpan={4}>
