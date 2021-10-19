@@ -1,6 +1,25 @@
 import { Button } from '@chakra-ui/button';
-import { Box, Stack } from '@chakra-ui/layout';
+import { Box, Center, Flex, Stack } from '@chakra-ui/layout';
+import { HStack, Link } from '@chakra-ui/react';
 import React from 'react';
+import { ColorModeSwitcher } from '../ColorModeSwitcher';
+
+const Links = ['About', 'Products', 'Our Team'];
+
+function NavLinks(tabs: string[]) {
+  let NavLinks;
+  NavLinks = tabs.map((tab) => (
+    <Link
+      _hover={{
+        color: 'purple.500'
+      }}
+      href={'#'}
+    >
+      {tab}
+    </Link>
+  ));
+  return NavLinks;
+}
 
 function Header() {
   return (
@@ -9,29 +28,29 @@ function Header() {
         This is the header
       </Box>
       <nav>
-        <Box
-          d='flex'
-          alignItems='center'
-          justifyContent='space-between'
-          ml={6}
-          mr={6}
-        >
-          <Box>
-            <Button pr={5} colorScheme='Gray.700' fontSize='lg' variant='link'>
-              About
-            </Button>
-            <Button pr={5} colorScheme='Gray.700' fontSize='lg' variant='link'>
-              Products
-            </Button>
-            <Button pr={5} colorScheme='Gray.700' fontSize='lg' variant='link'>
-              Our Team
-            </Button>
-          </Box>
-          <Box>
-            <Button pr={5} colorScheme='Gray.700' fontSize='lg' variant='link'>
-              Contact
-            </Button>
-          </Box>
+        <Box px={4}>
+          <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+            <HStack
+              as={'nav'}
+              spacing={4}
+              display={{ base: 'none', md: 'flex' }}
+            >
+              {NavLinks(Links)}
+            </HStack>
+            <Flex alignItems={'center'}>
+              <HStack spacing={8} alignItems={'center'}>
+                <Link
+                  _hover={{
+                    color: 'purple.500',
+                  }}
+                  href={'#'}
+                >
+                  Contact
+                </Link>
+                <ColorModeSwitcher />
+              </HStack>
+            </Flex>
+          </Flex>
         </Box>
       </nav>
     </Stack>
