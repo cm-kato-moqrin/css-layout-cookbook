@@ -1,5 +1,4 @@
-import { Button } from '@chakra-ui/button';
-import { Box, Center, Flex, Stack } from '@chakra-ui/layout';
+import { Box, Flex, Stack } from '@chakra-ui/layout';
 import { HStack, Link } from '@chakra-ui/react';
 import React from 'react';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
@@ -11,7 +10,7 @@ function NavLinks(tabs: string[]) {
   NavLinks = tabs.map((tab) => (
     <Link
       _hover={{
-        color: 'purple.500'
+        color: 'purple.500',
       }}
       href={'#'}
     >
