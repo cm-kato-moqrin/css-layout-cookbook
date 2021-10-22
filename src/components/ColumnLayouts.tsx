@@ -12,12 +12,19 @@ function BoxSentences(sentences: string[], isFlex: boolean) {
   let boxItems;
   isFlex
     ? (boxItems = sentences.map((sentence) => (
-        <Box flex='1' border='1px' borderRadius='lg' p={2} mr='2'>
+        <Box
+          flex='1'
+          border='1px'
+          borderRadius='lg'
+          p={2}
+          mr='2'
+          key={sentence}
+        >
           {sentence}
         </Box>
       )))
     : (boxItems = sentences.map((sentence) => (
-        <Box border='1px' borderRadius='lg' p={2} mr='2'>
+        <Box border='1px' borderRadius='lg' p={2} mr='2' key={sentence}>
           {sentence}
         </Box>
       )));
