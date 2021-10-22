@@ -30,13 +30,7 @@ function Header() {
       <nav>
         <Box px={4}>
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-            <HStack
-              as={'nav'}
-              spacing={4}
-              display={{ base: 'none', md: 'flex' }}
-            >
-              {NavLinks(links)}
-            </HStack>
+            <HStack spacing={4}>{NavLinks(links)}</HStack>
             <Flex alignItems={'center'}>
               <HStack spacing={8} alignItems={'center'}>
                 <Link
