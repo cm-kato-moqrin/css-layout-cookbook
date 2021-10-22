@@ -6,8 +6,11 @@ const links = ['Home', 'Category', 'Sub-Category', 'Products', 'Our Team'];
 
 function BreadcrumbLinks(crumbs: string[]) {
   let breadcrumbNavLinks;
-  breadcrumbNavLinks = crumbs.map((crumb) => (
-    <BreadcrumbItem key={crumb}>
+  breadcrumbNavLinks = crumbs.map((crumb, index) => (
+    <BreadcrumbItem
+      key={crumb}
+      isCurrentPage={index === crumbs.length - 1 ? true : false}
+    >
       <BreadcrumbLink
         _hover={{
           color: 'purple.500',
