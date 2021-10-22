@@ -3,6 +3,8 @@ import { HStack, Link } from '@chakra-ui/react';
 import React from 'react';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
+import BreadCrumbNav from './BreadCrumbNav';
+
 const Links = ['About', 'Products', 'Our Team'];
 
 function NavLinks(tabs: string[]) {
@@ -50,6 +52,7 @@ function Header() {
               </HStack>
             </Flex>
           </Flex>
+          <BreadCrumbNav />
         </Box>
       </nav>
     </Stack>
