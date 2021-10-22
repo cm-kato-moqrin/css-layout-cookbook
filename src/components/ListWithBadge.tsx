@@ -6,7 +6,11 @@ const Items = ['Item One', 'Item Two', 'Item Three', 'Item Four'];
 function ListItems(items: string[]) {
   let ListItems;
   ListItems = items.map((item, index) => (
-    <ListItem borderTop='1px' borderColor='#ccc' key={item}>
+    <ListItem
+      borderTop={index === 0 ? '' : '1px'}
+      borderColor='#ccc'
+      key={item}
+    >
       <Flex>
         <Box p={4}>{item}</Box>
         <Spacer />
@@ -17,8 +21,7 @@ function ListItems(items: string[]) {
         </Circle>
       </Flex>
     </ListItem>
-  )
-  );
+  ));
   return ListItems;
 }
 
