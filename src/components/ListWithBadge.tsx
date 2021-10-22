@@ -1,11 +1,11 @@
 import { Box, Circle, Flex, List, ListItem, Spacer } from '@chakra-ui/react';
 import React from 'react';
 
-const Items = ['Item One', 'Item Two', 'Item Three', 'Item Four'];
+const items = ['Item One', 'Item Two', 'Item Three', 'Item Four'];
 
 function ListItems(items: string[]) {
-  let ListItems;
-  ListItems = items.map((item, index) => (
+  let listItems;
+  listItems = items.map((item, index) => (
     <ListItem
       borderTop={index === 0 ? '' : '1px'}
       borderColor='#ccc'
@@ -22,13 +22,13 @@ function ListItems(items: string[]) {
       </Flex>
     </ListItem>
   ));
-  return ListItems;
+  return listItems;
 }
 
 function ListWithBadge() {
   return (
     <List border='2px' borderColor='#ccc' rounded='lg' w='20em'>
-      {ListItems(Items)}
+      {ListItems(items)}
     </List>
   );
 }
