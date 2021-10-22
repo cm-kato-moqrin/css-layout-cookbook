@@ -3,11 +3,11 @@ import { HStack, Link } from '@chakra-ui/react';
 import React from 'react';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
-const Links = ['About', 'Products', 'Our Team'];
+const links = ['About', 'Products', 'Our Team'];
 
 function NavLinks(tabs: string[]) {
-  let NavLinks;
-  NavLinks = tabs.map((tab) => (
+  let navLinks;
+  navLinks = tabs.map((tab) => (
     <Link
       _hover={{
         color: 'purple.500',
@@ -18,7 +18,7 @@ function NavLinks(tabs: string[]) {
       {tab}
     </Link>
   ));
-  return NavLinks;
+  return navLinks;
 }
 
 function Header() {
@@ -35,7 +35,7 @@ function Header() {
               spacing={4}
               display={{ base: 'none', md: 'flex' }}
             >
-              {NavLinks(Links)}
+              {NavLinks(links)}
             </HStack>
             <Flex alignItems={'center'}>
               <HStack spacing={8} alignItems={'center'}>
