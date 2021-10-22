@@ -7,7 +7,7 @@ const Links = ['Home', 'Category', 'Sub-Category', 'Products', 'Our Team'];
 function BreadcrumbLinks(crumbs: string[]) {
   let BreadcrumbNavLinks;
   BreadcrumbNavLinks = crumbs.map((crumb) => (
-    <BreadcrumbItem>
+    <BreadcrumbItem key={crumb}>
       <BreadcrumbLink
         _hover={{
           color: 'purple.500',

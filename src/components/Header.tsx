@@ -15,6 +15,7 @@ function NavLinks(tabs: string[]) {
         color: 'purple.500',
       }}
       href={'#'}
+      key={tab}
     >
       {tab}
     </Link>
