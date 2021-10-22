@@ -2,11 +2,11 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
 
 import React from 'react';
 
-const Links = ['Home', 'Category', 'Sub-Category', 'Products', 'Our Team'];
+const links = ['Home', 'Category', 'Sub-Category', 'Products', 'Our Team'];
 
 function BreadcrumbLinks(crumbs: string[]) {
-  let BreadcrumbNavLinks;
-  BreadcrumbNavLinks = crumbs.map((crumb) => (
+  let breadcrumbNavLinks;
+  breadcrumbNavLinks = crumbs.map((crumb) => (
     <BreadcrumbItem key={crumb}>
       <BreadcrumbLink
         _hover={{
@@ -18,13 +18,13 @@ function BreadcrumbLinks(crumbs: string[]) {
       </BreadcrumbLink>
     </BreadcrumbItem>
   ));
-  return BreadcrumbNavLinks;
+  return breadcrumbNavLinks;
 }
 
 function BreadCrumbNav() {
   return (
     <Breadcrumb fontWeight='medium' fontSize='md' separator='→'>
-      {BreadcrumbLinks(Links)}
+      {BreadcrumbLinks(links)}
     </Breadcrumb>
   );
 }
