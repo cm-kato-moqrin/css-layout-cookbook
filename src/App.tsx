@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { ChakraProvider, Box } from '@chakra-ui/react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import CardGrid from './components/CardGrid';
+import { CardGrid, Footer, Header, Pagination } from './components';
 import customTheme from './extendTheme';
 
 export const App = () => (
@@ -12,6 +10,7 @@ export const App = () => (
         <Header />
         <Box p={4} mb='auto'>
           <CardGrid />
+          <Pagination />
         </Box>
         <Footer />
       </Box>
