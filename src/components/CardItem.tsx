@@ -53,7 +53,12 @@ function CardItem({ cardProperty }: { cardProperty: Card }) {
           {cardProperty.content}
         </Box>
       </Box>
-      <Box bg={cardProperty.isFooter ? '#2D3748' : '#fff'} color='#fff' p={3}>
+      <Box
+        bg='#2D3748'
+        d={cardProperty.isFooter ? '' : 'none'}
+        color='#fff'
+        p={3}
+      >
         {cardProperty.footerContent}
       </Box>
     </SimpleGrid>

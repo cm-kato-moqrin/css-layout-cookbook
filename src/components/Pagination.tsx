@@ -5,8 +5,8 @@ const pages: number[] = [1, 2, 3, 4];
 
 function PageLinks(pages: number[]) {
   let pageLinks;
-  pageLinks = pages.map((page) => (
-    <Square borderColor='#2D3748' borderWidth='1px' rounded='md' size='45px'>
+  pageLinks = pages.map((page, index) => (
+    <Square borderColor='#2D3748' borderWidth='1px' rounded='md' size='45px' key={index}>
       <Link
         _hover={{
           color: 'purple.500',
