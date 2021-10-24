@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ChakraProvider, Box } from '@chakra-ui/react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CardGrid from './components/CardGrid';
 import customTheme from './extendTheme';
 
 export const App = () => (
@@ -10,8 +11,7 @@ export const App = () => (
       <Box display='flex' flexDirection='column' minH='100vh'>
         <Header />
         <Box p={4} mb='auto'>
-          Main page content here, add more if you want to see the footer push
-          down.
+          <CardGrid />
         </Box>
         <Footer />
       </Box>
