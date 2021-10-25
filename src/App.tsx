@@ -11,7 +11,7 @@ export const App = () => (
           <Header />
           <Box p={4} mb='auto'>
             <CardGrid />
-            <Pagination />
+            <Pagination  />
           </Box>
           <Footer />
         </Grid>
