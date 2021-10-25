@@ -54,17 +54,29 @@ function ColumnLayounts() {
   ];
   return (
     <VStack spacing={8} divider={<StackDivider borderColor='gray.200' />}>
-      <Container maxW='container.xl' border='1px' p={2} borderRadius='lg'>
-        <Flex>{BoxSentences(sampleSentences1, true)}</Flex>
-      </Container>
-      <Container maxW='container.sm' border='1px' p={2} borderRadius='lg'>
-        <Flex wrap='wrap'>
+      <Box border='1px' p={2} borderRadius='lg' textStyle='p'>
+        <Flex m={2}>{BoxSentences(sampleSentences1, true)}</Flex>
+      </Box>
+      <Container
+        maxW='container.sm'
+        border='1px'
+        p={2}
+        borderRadius='lg'
+        textStyle='p'
+      >
+        <Flex wrap='wrap' m={2}>
           <Flex>{BoxSentences(sampleSentences1.slice(0, 2), true)}</Flex>
           {BoxSentences(sampleSentences1.slice(2), false)}
         </Flex>
       </Container>
-      <Container maxW='container.sm' border='1px' p={2} borderRadius='lg'>
-        <SimpleGrid columns={2} spacing={4}>
+      <Container
+        maxW='container.sm'
+        border='1px'
+        p={2}
+        borderRadius='lg'
+        textStyle='p'
+      >
+        <SimpleGrid columns={2} spacing={4} m={3}>
           {BoxSentences(sampleSentences2, false)}
         </SimpleGrid>
       </Container>
