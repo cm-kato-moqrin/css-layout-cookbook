@@ -3,50 +3,50 @@ import React from 'react';
 
 function GridWrapper() {
   return (
-    <Grid templateColumns='repeat(7, 1fr)' gap='10px'>
+    <Grid
+      templateColumns='minmax(20px, 1fr) repeat(6, minmax(0, 130px)) minmax(20px,1fr)'
+      templateRows='minmax(100px, auto)'
+      gap='10px'
+    >
       <GridItem
-        colStart={3}
-        colEnd={6}
-        colSpan={3}
         border='2px'
         borderColor='black'
         rounded='lg'
         p='20px'
         textStyle='p'
+        gridColumn='2/-2'
       >
         This item aligns to a central “wrapper” – columns that have a maximum
         width.
       </GridItem>
       <GridItem
-        colSpan={7}
         border='2px'
         borderColor='black'
         rounded='lg'
         p='20px'
         textStyle='p'
+        gridColumn='1/-1'
       >
         This item aligns to the edge of the grid container.
       </GridItem>
       <GridItem
-        colSpan={6}
         border='2px'
         borderColor='black'
         rounded='lg'
         p='20px'
         textStyle='p'
+        gridColumn='1 / -2'
       >
         This item aligns to the left edge of the grid container and the right
         edge of the wrapper.
       </GridItem>
       <GridItem
-        colStart={5}
-        colEnd={7}
-        colSpan={2}
         border='2px'
         borderColor='black'
         rounded='lg'
         p='20px'
         textStyle='p'
+        gridColumn='4 / -2'
       >
         This item aligns to the right edge of the “wrapper” columns.
       </GridItem>
