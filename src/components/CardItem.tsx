@@ -49,7 +49,7 @@ function CardItem({ cardProperty }: { cardProperty: Card }) {
           </Box>
         </Box>
 
-        <Box mt='4' as='h4' lineHeight='tight' p={2}>
+        <Box textStyle='p' mt='4' as='h4' lineHeight='tight' p={2}>
           {cardProperty.content}
         </Box>
       </Box>
