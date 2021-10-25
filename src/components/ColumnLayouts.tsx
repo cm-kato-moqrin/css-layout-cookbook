@@ -17,7 +17,7 @@ function BoxSentences(sentences: string[], isFlex: boolean) {
           border='1px'
           borderRadius='lg'
           p={2}
-          mr='2'
+          mr='5'
           key={sentence}
         >
           {sentence}
