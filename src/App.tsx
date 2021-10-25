@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ChakraProvider, StackDivider, VStack } from '@chakra-ui/react';
+import { Center, ChakraProvider, StackDivider, VStack } from '@chakra-ui/react';
 import CenterContainer from './components/CenterContainer';
 import ListWithBadge from './components/ListWithBadge';
 import GridWrapper from './components/GridWrapper';
@@ -13,10 +13,15 @@ export const App = () => (
       h='100px'
       borderColor='black'
       rounded='lg'
-      spacing={5}
+      spacing={8}
+      align='stretch'
     >
-      <CenterContainer />
-      <ListWithBadge />
+      <Center>
+        <CenterContainer />
+      </Center>
+      <Center>
+        <ListWithBadge />
+      </Center>
       <GridWrapper />
     </VStack>
   </ChakraProvider>
