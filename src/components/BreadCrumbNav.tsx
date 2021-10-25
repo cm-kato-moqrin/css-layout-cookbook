@@ -8,7 +8,7 @@ function BreadcrumbLinks(crumbs: string[]) {
   let breadcrumbNavLinks;
   breadcrumbNavLinks = crumbs.map((crumb, index) => (
     <BreadcrumbItem
-      key={crumb}
+      key={index}
       isCurrentPage={index === crumbs.length - 1 ? true : false}
     >
       <BreadcrumbLink
