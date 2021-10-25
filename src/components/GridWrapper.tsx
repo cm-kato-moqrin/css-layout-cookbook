@@ -12,6 +12,7 @@ function GridWrapper() {
         borderColor='black'
         rounded='lg'
         p='20px'
+        textStyle='p'
       >
         This item aligns to a central “wrapper” – columns that have a maximum
         width.
@@ -22,6 +23,7 @@ function GridWrapper() {
         borderColor='black'
         rounded='lg'
         p='20px'
+        textStyle='p'
       >
         This item aligns to the edge of the grid container.
       </GridItem>
@@ -31,6 +33,7 @@ function GridWrapper() {
         borderColor='black'
         rounded='lg'
         p='20px'
+        textStyle='p'
       >
         This item aligns to the left edge of the grid container and the right
         edge of the wrapper.
@@ -43,6 +46,7 @@ function GridWrapper() {
         borderColor='black'
         rounded='lg'
         p='20px'
+        textStyle='p'
       >
         This item aligns to the right edge of the “wrapper” columns.
       </GridItem>
