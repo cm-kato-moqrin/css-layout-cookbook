@@ -1,5 +1,5 @@
 import { Box, Flex, Stack } from '@chakra-ui/layout';
-import { HStack, Link } from '@chakra-ui/react';
+import { HStack, Link, Spacer } from '@chakra-ui/react';
 import React from 'react';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
@@ -29,10 +29,10 @@ function Header() {
       </Box>
       <nav>
         <Box px={4}>
-          <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+          <Flex h={16} justifyContent={'space-between'}>
             <HStack spacing={4}>{NavLinks(links)}</HStack>
-            <Flex alignItems={'center'}>
-              <HStack spacing={8} alignItems={'center'}>
+            <Spacer />
+              <HStack spacing={8}>
                 <Link
                   _hover={{
                     color: 'purple.500',
@@ -44,7 +44,6 @@ function Header() {
                 <ColorModeSwitcher />
               </HStack>
             </Flex>
-          </Flex>
         </Box>
       </nav>
     </Stack>
